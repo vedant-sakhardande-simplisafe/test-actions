@@ -18,4 +18,4 @@ jobs:
 
       - name: Hello World
         run: |
-          echo "Hello, World! This workflow was triggered from the branch: ${{ github.event.workflow_run.event.inputs.branch }}"
+          echo "Hello, World!"
