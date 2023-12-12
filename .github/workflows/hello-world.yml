@@ -7,6 +7,11 @@ on:
         description: 'Branch to run the workflow on'
         required: true
         default: 'main'
+      platform:
+        description: 'Platform to run appium tests on'
+        required: true
+        default: 'android'
+        choices: ['android', 'ios']
 
 jobs:
   build:
@@ -19,3 +24,5 @@ jobs:
       - name: Hello World
         run: |
           echo "Hello, World!"
+          echo "Branch: ${{ github.event.inputs.branch }}"
+          echo "Platform: ${{ github.event.inputs.platform }}"
